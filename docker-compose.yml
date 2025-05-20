@@ -11,7 +11,7 @@ services:
     volumes:
       - couchdb_data:/opt/couchdb/data
   web:
-    image: kniru/animal-app:latest
+    image: sh0l4/animal-search:latest
     depends_on:
       - couchdb
     environment:
