@@ -16,8 +16,8 @@ jobs:
 
     - name: Run Docker
       run: |
-        docker build -t sh0l4/animal-search:${{ github.run_number }} . 
-        docker tag sh0l4/animal-search:${github.run_number} sh0l4/animal-search:latest
+        "docker build -t sh0l4/animal-search:${{ github.run_number }} . "
+        "docker tag sh0l4/animal-search:${github.run_number} sh0l4/animal-search:latest "
 
     - name: Push image to Repo
       run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
