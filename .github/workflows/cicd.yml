@@ -25,6 +25,7 @@ jobs:
 
     - name: Run container
       run: |
+        "cd ~"
         "cd /actions-runner/_work/animal-search/animal-search"
         docker-compose up -d
     
