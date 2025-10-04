@@ -16,10 +16,15 @@ jobs:
 
     - name: Run Docker
       run: |
+        docker --version
         "docker build -t sh0l4/animal-search:${{ github.run_number }} . "
         "docker tag sh0l4/animal-search:${github.run_number} sh0l4/animal-search:latest "
 
     - name: Push image to Repo
       run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
+    - name: Run container
+      run: |
+        "cd /actions-runner/_work/animal-search/animal-search"
+        docker-compose up -d
     
