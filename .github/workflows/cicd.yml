@@ -17,7 +17,7 @@ jobs:
     - name: Run Docker
       run: |
         docker --version
-        docker build -t "sh0l4/animal-search:${{ github.run_number }} . "
+        docker build -t sh0l4/animal-search:"${{ github.run_number }}" .
         docker tag "sh0l4/animal-search:${github.run_number} sh0l4/animal-search:latest "
 
     - name: Push image to Repo
