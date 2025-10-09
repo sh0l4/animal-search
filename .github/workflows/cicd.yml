@@ -26,5 +26,5 @@ jobs:
     - name: Run container
       run: |
         pwd
-        docker-compose up -d
+        docker-compose up 
     
